@@ -12,18 +12,14 @@ class colour:
    END = '\033[0m'
 
 print(colour.BOLD + "The game is text-based.")
-
 def WTB():
     return None
-#end
+
 def End():
   print(colour.BOLD + colour.GREEN + "End" + colour.END)
-#Colour End
+
 def CEnd():
  print(colour.END)
-
-name = 'Daniel'
-#name = input("Please enter you name：") #additional function
 
 #1
 def Ch1():
@@ -49,7 +45,7 @@ def Ch3():
 def Ch4():
  print("\033[1mChapter 4: The Truth \033[0m" + colour.BOLD + colour.BLUE)
 
-#SpIn1 #SpIn stands for Special Input (It is easy to remember, right?)
+#SpIn stands for Special Input
 def SpIn1():
   input("Press enter to continue...")
   
@@ -125,13 +121,13 @@ def Ch5A():
  print("A2) You break up with the girl")
  CEnd()
  choice2a = input("Type A1 or A2: ")
- if choice2a == "A1":
+ if choice2a.upper == "A1":
    Ch5A1()
- elif choice2a == "A2":
+ elif choice2a.upper == "A2":
    Ch5A2()
- elif choice2a == "a1":
+ elif choice2a.upper == "a1":
    Ch5A1()
- elif choice2a == "a2":
+ elif choice2a.upper == "a2":
    Ch5A2()
 
 #2B
@@ -181,15 +177,10 @@ def Ch5B():
   print("B2) You and another " + name + " have become enemies.")
   CEnd()
   choice2b = input("Type B1 or B2: ")
-  if choice2b == "B1":
+  if choice2b.upper == "B1":
    Ch5B1()
-  elif choice2b == "B2":
+  elif choice2b.upper == "B2":
    Ch5B2()
-  elif choice2b == "b1":
-   Ch5B1()
-  elif choice2b == "b2":
-   Ch5B2()
-
 #5B1 
 def Ch5B1():
   print(colour.BOLD + colour.BLUE + "In this timeline, you find a new job.")
@@ -256,11 +247,11 @@ def Ch5C():
   print('C3) You will fight the boss with another ' + name)
   CEnd()
   choice2c = input("Type C1 , C2 or C3: ")
-  if choice2c == "C1":
+  if choice2c.upper == "C1":
    Ch5C1()
-  elif choice2c == "C2":
+  elif choice2c.upper == "C2":
    Ch5C2()
-  elif choice2c == "C3":
+  elif choice2c.upper == "C3":
    Ch5C3()
 
 #5C1
@@ -305,6 +296,7 @@ def Ch5C3():
 choice1 = None 
 while True:
     if choice1 == None:
+        name = input("Please enter you name")  
         Ch1()
     elif choice1.upper() == "A":
         Ch2A()
